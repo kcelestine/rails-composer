@@ -321,7 +321,7 @@ if prefer :git, true
   copy_from 'https://raw.github.com/RailsApps/rails-composer/master/files/gitignore.txt', '.gitignore'
   git :init
   git :add => '-A'
-  git :commit => '-qm "rails_apps_composer: initial commit"'
+  git :commit => '-qm "initial commit"'
 else
   stage_three do
     say_wizard "recipe stage three"
@@ -1087,7 +1087,7 @@ TEXT
   end
 
   git :add => '-A' if prefer :git, true
-  git :commit => '-qm "rails_apps_composer: add README files"' if prefer :git, true
+  git :commit => '-qm "add README files"' if prefer :git, true
 
 end
 # >---------------------------- recipes/readme.rb ----------------------------end<
@@ -1227,7 +1227,7 @@ end
 
 ## Git
 git :add => '-A' if prefer :git, true
-git :commit => '-qm "rails_apps_composer: Gemfile"' if prefer :git, true
+git :commit => '-qm "Gemfile"' if prefer :git, true
 
 ### CREATE DATABASE ###
 stage_two do
@@ -1286,7 +1286,7 @@ stage_two do
     run 'bundle exec rake db:create:all'
     ## Git
     git :add => '-A' if prefer :git, true
-    git :commit => '-qm "rails_apps_composer: create database"' if prefer :git, true
+    git :commit => '-qm "create database"' if prefer :git, true
   end
 end
 
@@ -1356,7 +1356,7 @@ FILE
   end
   ## Git
   git :add => '-A' if prefer :git, true
-  git :commit => '-qm "rails_apps_composer: generators"' if prefer :git, true
+  git :commit => '-qm "generators"' if prefer :git, true
 end
 # >----------------------------- recipes/gems.rb -----------------------------end<
 # >-------------------------- templates/recipe.erb ---------------------------end<
@@ -1383,7 +1383,7 @@ stage_two do
     run 'bundle exec guard init'
   end
   git :add => '-A' if prefer :git, true
-  git :commit => '-qm "rails_apps_composer: testing framework"' if prefer :git, true
+  git :commit => '-qm "testing framework"' if prefer :git, true
 end
 
 stage_three do
@@ -1482,7 +1482,7 @@ TEXT
   end
   ### GIT
   git :add => '-A' if prefer :git, true
-  git :commit => '-qm "rails_apps_composer: set email accounts"' if prefer :git, true
+  git :commit => '-qm "set email accounts"' if prefer :git, true
 end
 # >---------------------------- recipes/email.rb -----------------------------end<
 # >-------------------------- templates/recipe.erb ---------------------------end<
@@ -1515,7 +1515,7 @@ stage_two do
   end
   ### GIT ###
   git :add => '-A' if prefer :git, true
-  git :commit => '-qm "rails_apps_composer: devise"' if prefer :git, true
+  git :commit => '-qm "devise"' if prefer :git, true
 end
 # >---------------------------- recipes/devise.rb ----------------------------end<
 # >-------------------------- templates/recipe.erb ---------------------------end<
@@ -1554,7 +1554,7 @@ TEXT
   end
   ### GIT ###
   git :add => '-A' if prefer :git, true
-  git :commit => '-qm "rails_apps_composer: omniauth"' if prefer :git, true
+  git :commit => '-qm "omniauth"' if prefer :git, true
 end
 # >--------------------------- recipes/omniauth.rb ---------------------------end<
 # >-------------------------- templates/recipe.erb ---------------------------end<
@@ -1595,7 +1595,7 @@ RUBY
   end
   ### GIT ###
   git :add => '-A' if prefer :git, true
-  git :commit => '-qm "rails_apps_composer: add roles to a User model"' if prefer :git, true
+  git :commit => '-qm "add roles to a User model"' if prefer :git, true
 end
 # >---------------------------- recipes/roles.rb -----------------------------end<
 # >-------------------------- templates/recipe.erb ---------------------------end<
@@ -1629,7 +1629,7 @@ stage_two do
 
   ### GIT ###
   git :add => '-A' if prefer :git, true
-  git :commit => '-qm "rails_apps_composer: front-end framework"' if prefer :git, true
+  git :commit => '-qm "front-end framework"' if prefer :git, true
 end
 # >--------------------------- recipes/frontend.rb ---------------------------end<
 # >-------------------------- templates/recipe.erb ---------------------------end<
@@ -1665,7 +1665,7 @@ stage_two do
   generate 'layout:navigation -f'
   ### GIT ###
   git :add => '-A' if prefer :git, true
-  git :commit => '-qm "rails_apps_composer: add pages"' if prefer :git, true
+  git :commit => '-qm "add pages"' if prefer :git, true
 end
 # >---------------------------- recipes/pages.rb -----------------------------end<
 # >-------------------------- templates/recipe.erb ---------------------------end<
@@ -1802,7 +1802,7 @@ FILE
   end
   ### GIT ###
   git :add => '-A' if prefer :git, true
-  git :commit => '-qm "rails_apps_composer: set up database"' if prefer :git, true
+  git :commit => '-qm "set up database"' if prefer :git, true
   ### FRONTEND (must run after database migrations) ###
   # generate Devise views with appropriate styling
   if prefer :authentication, 'devise'
@@ -1817,7 +1817,7 @@ FILE
   generate 'layout:navigation -f'
   ### GIT ###
   git :add => '-A' if prefer :git, true
-  git :commit => '-qm "rails_apps_composer: navigation links"' if prefer :git, true
+  git :commit => '-qm "navigation links"' if prefer :git, true
 end
 # >----------------------------- recipes/init.rb -----------------------------end<
 # >-------------------------- templates/recipe.erb ---------------------------end<
@@ -1859,7 +1859,7 @@ stage_two do
   end
   ### GIT ###
   git :add => '-A' if prefer :git, true
-  git :commit => '-qm "rails_apps_composer: add analytics"' if prefer :git, true
+  git :commit => '-qm "add analytics"' if prefer :git, true
 end
 # >-------------------------- recipes/analytics.rb ---------------------------end<
 # >-------------------------- templates/recipe.erb ---------------------------end<
@@ -2082,7 +2082,7 @@ stage_three do
   gsub_file 'config/routes.rb', /\n^\s*\n/, "\n"
   # GIT
   git :add => '-A' if prefer :git, true
-  git :commit => '-qm "rails_apps_composer: extras"' if prefer :git, true
+  git :commit => '-qm "extras"' if prefer :git, true
 end
 
 ## GITHUB
